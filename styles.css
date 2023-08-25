@@ -7,21 +7,17 @@
     margin: 0;
 }
 
+html {
+    background-color: #7ea9c2;
+}
+
 /** ----------seccion navegacion---------- **/
 
 .navegacion {
-    background-color: #7ea9c2;
+    background-color: #5a6a80;
     padding: 20px;
     display: flex;
-}
-
-.enlace {
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-family: Helvetica, sans-serif;
-    font-weight: 700;
-    margin-left: 30px;
+    box-shadow: 2px 2px 4px #00000066;
 }
 
 .nav {
@@ -30,13 +26,18 @@
     align-items: center;
 }
 
-.navegacion {
-    box-shadow: 2px 2px 4px #00000066;
-    }
+.enlace {
+    justify-content: center;
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    margin-left: 30px;
+}
 
-
-.logo {
-    width: 50px;
+.logo-montaña {
+    font-size: 30px;
+    color: antiquewhite;
 }
 
 /** ----------seccion presentacion---------- **/
@@ -52,10 +53,6 @@
     font-family: probandofuente;
 }
 
-html {
-    background-color: #7ea9c2;
-}
-
 .fondo {
     background-image: url(/assets/bariloche-cerro-campanario.jpg); 
     background-size: cover;
@@ -64,7 +61,22 @@ html {
     padding: 200px;
 }
 
-/** ----------seccion lugares---------- **/
+/** ----------artículo de información---------- **/
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #b1c7cf;
+}
+
+#sobreBariloche {
+    font-size: 30px;
+    text-decoration: underline overline #382c21;
+}
+
+
 
 .lugares {
     display: grid;
@@ -77,6 +89,12 @@ html {
     width: 200px;
     height: 200px;
     background-color: aqua;
+}
+
+/** ----------seccion sobre Bariloche---------- **/
+
+.fotosBariloche {
+    width: 200px;
 }
 
 /** ----------seccion formulario---------- **/
@@ -112,3 +130,4 @@ textarea {
 .comentario {
     display: flex;
 }
+
