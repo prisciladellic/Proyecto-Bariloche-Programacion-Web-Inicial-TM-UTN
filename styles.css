@@ -3,21 +3,31 @@
     src: url(./fuentes/BebasNeue-Regular.ttf);
 }
 
+:root {
+    --colorPrincipal: #d4d4d5;
+    --colorSecundario: #7ea9c2;
+    --colorFuente: #3b4655;
+    --colorSubtitulos: #62879d;
+    --tamañoFuente: 18px;
+    --espacioLineas: 24px;
+}
+ 
 * {
     margin: 0;
+    padding: 0;
 }
 
 html {
-    background-color: #7ea9c2;
+    background-color: var(--colorPrincipal);
 }
 
-/** ----------seccion navegacion---------- **/
+/** ----------sección navegación---------- **/
 
 .navegacion {
-    background-color: #5a6a80;
+    background-color: #7ea9c2;
     padding: 20px;
     display: flex;
-    box-shadow: 2px 2px 4px #00000066;
+    box-shadow: 10px 10px 4px #00000066;
 }
 
 .nav {
@@ -40,9 +50,9 @@ html {
     color: antiquewhite;
 }
 
-/** ----------seccion presentacion---------- **/
+/** ----------sección presentación---------- **/
 
-.titulo {
+.titulosCabecera {
     margin: 0px 0px 0px 13px;
     padding: 30px 0px 0px 0px;
     font-size: 4rem;
@@ -53,13 +63,13 @@ html {
     font-family: probandofuente;
 }
 
-.fondo {
-    background-image: url(/assets/bariloche-cerro-campanario.jpg); 
+.fondoPrincipal {
+    background-image: url(./assets/bariloche-fondo-principal.jpeg); 
     background-size: cover;
     background-repeat: no-repeat; 
-    background-position: center -400px;
-    padding: 200px;
-}
+    background-position: center -200px;
+    padding: 160px;
+    }
 
 /** ----------artículo de información---------- **/
 
@@ -69,35 +79,157 @@ html {
     align-items: center;
     padding: 40px;
     background-color: #b1c7cf;
+    color: var(--colorFuente);
 }
 
 #sobreBariloche {
+    margin: 20px;
     font-size: 30px;
-    text-decoration: underline overline #382c21;
+    color: var(--colorSubtitulos);
 }
 
+#link-saber-mas {
+    text-decoration: none;
+    color: var(--colorFuente);
+}
 
+/** ----------sección lugares---------- **/
+
+.subtitulos {
+    text-align: center;
+    margin: 50px 0px 20px;
+}
 
 .lugares {
     display: grid;
     grid-template-columns: 400px 400px 400px;
+    justify-content: center;
 }
 
-.cerro {
-    border: solid 10px red;
-    margin: 30px;
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
+.tarjeta {
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
-/** ----------seccion sobre Bariloche---------- **/
+.cerro-campanario {
+    background: url(./assets/bariloche-cerro-campanario2.jpg) 
+    top center/cover;
+}
+
+.cerro-catedral {
+    background: url(./assets/bariloche-cerro-catedral.jpg) top center/cover;
+}
+
+.cerro-otto {
+    background: url(./assets/bariloche-cerro-otto.jpeg) top center/cover;
+}
+
+.cerro-tronador {
+    background: url(./assets/bariloche-cerro-tronador.jpeg) top center/cover;
+}
+
+.ventisquero-negro {
+    background: url(./assets/ventisquero-negro.jpeg) top center/cover;
+}
+
+.cerro-llaollao {
+    background: url(./assets/bariloche-cerro-llaollao.jpeg) top center/cover;
+}
+
+.playa-bonita {
+    background: url(./assets/playa-bonita.jpeg) top center/cover;
+}
+
+.pampa-linda {
+    background: url(./assets/pampa-linda.jpeg) top center/cover;
+}
+
+.colonia-suiza {
+    background: url(./assets/colonia-suizajpg.jpg) top center/cover;
+}
+
+.contenido-tarjeta {
+    position: relative;
+    padding: 20px;
+    background-color:#b1c7cf;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    transform: translateY(70%);
+    transition: transform 0.3%;
+}
+
+.contenido-tarjeta::before {
+    content: '';
+    position: absolute;
+    top: -52px;
+    right: -48px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: inset -48px -48px #b1c7cf;
+}
+
+.contenido-tarjeta:hover {
+    transform: translateY(0);
+
+}
+
+.titulo-tarjeta {
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.parrafos {
+    font-size: var(--tamañoFuente);
+    color: var(--colorFuente);
+    line-height: var(--espacioLineas);
+}
+
+/** ----------sección sobre Bariloche---------- **/
+
+.fondoSobreBariloche {
+    background-image: url(/assets/bariloche-cerro-campanario2.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center -400px;
+    padding: 200px;
+}
+
+.sobreBariloche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
 
 .fotosBariloche {
-    width: 200px;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #00000066;
+    margin: 20px;
 }
 
-/** ----------seccion formulario---------- **/
+.parrafosSobreBariloche {
+    font-size: var(--tamañoFuente);
+    line-height: var(--espacioLineas);
+    margin: 5px 200px;
+    text-align: start;
+    color: var(--colorFuente);
+}
+
+strong {
+    color: #62879d;
+}
+
+/** ----------sección formulario---------- **/
 
 .formulario {
     display: flex;
@@ -131,3 +263,11 @@ textarea {
     display: flex;
 }
 
+/** ----------seccion footer---------- **/
+
+footer {
+    background-color: #5a6a80;
+    padding: 20px;
+    box-shadow: 2px 2px 4px #00000066;
+    color: antiquewhite;
+}
