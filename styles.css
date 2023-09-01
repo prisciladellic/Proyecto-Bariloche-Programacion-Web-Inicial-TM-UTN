@@ -3,6 +3,8 @@
     src: url(./fuentes/BebasNeue-Regular.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --colorPrincipal: #d4d4d5;
     --colorSecundario: #7ea9c2;
@@ -15,19 +17,20 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
     background-color: var(--colorPrincipal);
+    color: var(--colorFuente);
 }
 
 /** ----------sección navegación---------- **/
 
 .navegacion {
-    background-color: #7ea9c2;
+    background-color: var(--colorSecundario);
     padding: 20px;
     display: flex;
-    box-shadow: 10px 10px 4px #00000066;
 }
 
 .nav {
@@ -36,13 +39,13 @@ html {
     align-items: center;
 }
 
-.enlace {
+.enlaces-nav {
     justify-content: center;
     text-decoration: none;
     color: antiquewhite;
-    font-family: Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: normal;
     margin-left: 30px;
+
 }
 
 .logo-montaña {
@@ -52,24 +55,24 @@ html {
 
 /** ----------sección presentación---------- **/
 
-.titulosCabecera {
-    margin: 0px 0px 0px 13px;
-    padding: 30px 0px 0px 0px;
-    font-size: 4rem;
-    text-align: center;
-    color: white;
-    font-weight: 200;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.572);
-    font-family: probandofuente;
-}
-
 .fondoPrincipal {
     background-image: url(./assets/bariloche-fondo-principal.jpeg); 
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center -200px;
-    padding: 160px;
-    }
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulosCabecera {
+    font-size: 4rem;
+    color: white;
+    font-weight: 200;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.572);
+    font-family: probandofuente;
+}
 
 /** ----------artículo de información---------- **/
 
@@ -88,10 +91,54 @@ html {
     color: var(--colorSubtitulos);
 }
 
-#link-saber-mas {
+.boton {
     text-decoration: none;
     color: var(--colorFuente);
+    background-color: var(--colorSecundario);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+/** ----------sección sobre Bariloche---------- **/
+
+.fondoSobreBariloche {
+    background-image: url(./assets/bariloche-cerro-campanario2.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center -400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreBariloche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.fotosBariloche {
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #00000066;
+    margin: 20px;
+}
+
+.parrafos-informacion {
+    font-size: var(--tamañoFuente);
+    line-height: var(--espacioLineas);
+    margin: 10px 200px;
+    text-align: start;
+    color: var(--colorFuente);
+}
+
+strong {
+    color: #62879d;
+}
+
 
 /** ----------sección lugares---------- **/
 
@@ -123,14 +170,6 @@ html {
     top center/cover;
 }
 
-.cerro-catedral {
-    background: url(./assets/bariloche-cerro-catedral.jpg) top center/cover;
-}
-
-.cerro-otto {
-    background: url(./assets/bariloche-cerro-otto.jpeg) top center/cover;
-}
-
 .cerro-tronador {
     background: url(./assets/bariloche-cerro-tronador.jpeg) top center/cover;
 }
@@ -151,17 +190,13 @@ html {
     background: url(./assets/pampa-linda.jpeg) top center/cover;
 }
 
-.colonia-suiza {
-    background: url(./assets/colonia-suizajpg.jpg) top center/cover;
-}
-
 .contenido-tarjeta {
     position: relative;
     padding: 20px;
     background-color:#b1c7cf;
     border-top-left-radius: 20px;
     cursor: pointer;
-    transform: translateY(70%);
+    transform: translateY(75%);
     transition: transform 0.3%;
 }
 
@@ -183,50 +218,75 @@ html {
 }
 
 .titulo-tarjeta {
-    font-weight: normal;
     padding-bottom: 20px;
 }
 
-.parrafos {
+.parrafos-tarjetas {
     font-size: var(--tamañoFuente);
     color: var(--colorFuente);
     line-height: var(--espacioLineas);
 }
 
-/** ----------sección sobre Bariloche---------- **/
+.enlaces {
+    text-decoration: none;
+    color: var(--colorFuente);
+}
 
-.fondoSobreBariloche {
-    background-image: url(/assets/bariloche-cerro-campanario2.jpg); 
+/** ----------sección cerro campanario---------- **/
+
+.fondoCerroCampanario {
+    background-image: url(./assets/cerro-campanario1.jpeg); 
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center -400px;
-    padding: 200px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sobreBariloche {
+.informacionGeneral {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    justify-content: center;
 }
 
-.fotosBariloche {
-    width: 500px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px #00000066;
+.titulo {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.mapas { 
     margin: 20px;
+    margin-bottom: 40px;
 }
 
-.parrafosSobreBariloche {
-    font-size: var(--tamañoFuente);
-    line-height: var(--espacioLineas);
-    margin: 5px 200px;
-    text-align: start;
-    color: var(--colorFuente);
+/** ----------sección cerro tronador---------- **/
+
+.fondoCerroTronador {
+    background-image: url(./assets/bariloche-cerro-tronador.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center -100px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-strong {
-    color: #62879d;
+/** ----------sección cerro llaollao---------- **/
+
+.fondoCerroLlaoLlao {
+    background-image: url(./assets/bariloche-cerro-llaollao.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center -350px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /** ----------sección formulario---------- **/
@@ -234,13 +294,14 @@ strong {
 .formulario {
     display: flex;
     justify-content: center;
+    height: 350px;
 }
 
 .contactanos {
     margin: 50px 0px 20px;
     font-size: 15px;
     text-align: center;
-    color: BFC0C0;
+    color: var(--colorFuente)
 }
 
 .labels {
@@ -256,18 +317,24 @@ textarea {
 .inputs {
     border-radius: 10px;
     margin: 5px;
-    border: 3px solid #2D3142;
+    border: 3px solid var(--colorFuente);
 }
 
 .comentario {
     display: flex;
 }
 
+.boton-formulario {
+    border: none;
+    font-size: 14px;
+}
+
 /** ----------seccion footer---------- **/
 
 footer {
-    background-color: #5a6a80;
-    padding: 20px;
-    box-shadow: 2px 2px 4px #00000066;
+    background-color: var(--colorSecundario);
+    padding: 30px;
     color: antiquewhite;
+    font-size: 13px;
 }
+
