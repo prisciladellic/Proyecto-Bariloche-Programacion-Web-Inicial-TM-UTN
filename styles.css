@@ -22,6 +22,10 @@ html {
     background-color: var(--colorPrincipal);
     color: var(--colorFuente);
 }
+strong {
+    color: #62879d;
+}
+
 
 /** ----------sección navegación---------- **/
 .navegacion {
@@ -120,9 +124,6 @@ html {
     text-align: start;
     color: var(--colorFuente);
 }
-strong {
-    color: #62879d;
-}
 
 /** ----------sección lugares---------- **/
 .subtitulos {
@@ -131,7 +132,7 @@ strong {
 }
 .lugares {
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 400px 400px;
     justify-content: center;
 }
 .tarjeta {
@@ -238,6 +239,11 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+p>a {
+    color: #62879d;
+    font-weight: bold;
 }
 
 /** ----------sección cerro llaollao---------- **/
